@@ -18,21 +18,15 @@ export class PorCapitalComponent {
   buscar(termino: string) {
     this.hayError = false;
     this.termino = termino;
-
-    if (this.termino === "") {
-      false
-    } else {
-      this.paisService.buscarCapital(this.termino).subscribe((paises: any) => {
-        console.log(paises)
-        this.paises = paises;
-      }, (err) => {
-        console.log("Error")
-        this.hayError = true;
-      })
-    }
+    this.paisService.buscarCapital(this.termino)
+      .subscribe({
+        next: (resp) => {
+          this.paises = resp;
+        },
+        error: (err) => {
+          this.hayError = true; this.paises = [];
+          console.log("ERROR" + err);
+        }
+      });
   }
-
-  sugerencias(termino: string) {
-    this.hayError = false
-  }
-} 
+}

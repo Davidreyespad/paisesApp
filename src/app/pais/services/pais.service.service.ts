@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
-
 
 import { PaisInterface } from '../interfaces/pais.interface';
 
@@ -23,7 +21,6 @@ export class PaisServiceService {
 
   buscarPais(termino: string): Observable<PaisInterface[]> {
     const url = `${this.apiUrl}/name/${termino}`;
-
     return this.http.get<PaisInterface[]>(url, { params: this.httpParams });
   }
 
@@ -38,12 +35,7 @@ export class PaisServiceService {
   }
 
   buscarRegion( region: string ): Observable<PaisInterface[]> {
-
     const url = `${ this.apiUrl }/regionalbloc/${ region }`;
-
     return this.http.get<PaisInterface[]>( url, { params: this.httpParams } )
-            .pipe(
-              tap( console.log )
-            )
   }
 }

@@ -1,4 +1,5 @@
-<div *ngIf="!pais; else divPais" class="alert alert-info">
+<div *ngIf="!pais; else divPais" 
+    class="alert alert-info">
     Espere por favor...
 </div>
 
@@ -17,7 +18,7 @@
             <h3>Información</h3>
             <ul class="list-group">
                 <li class="list-group-item">
-                    <strong>Población</strong> {{ pais.population | number }}
+                    <strong>Población</strong> {{ pais.population | number }} personas.
                 </li>
                 <li class="list-group-item">
                     <strong>Código CCA2</strong> {{ pais.numericCode }}
@@ -32,26 +33,26 @@
     <h3>Traducciones</h3>
     <div class="row">
         <div class="col">
-            <span class="badge bg-primary mr-2">{{ 
-                pais.translations.de }}</span>
-            <span class="badge bg-primary mr-2">{{ 
-                pais.translations.es }}</span>
-            <span class="badge bg-primary mr-2">{{ 
-                pais.translations.fr }}</span>
-            <span class="badge bg-primary mr-2">{{ 
-                pais.translations.ja }}</span>
-            <span class="badge bg-primary mr-2">{{ 
-                pais.translations.it }}</span>
-            <span class="badge bg-primary mr-2">{{ 
-                pais.translations.br }}</span>
-            <span class="badge bg-primary mr-2">{{ 
-                pais.translations.pt }}</span>
-            <span class="badge bg-primary mr-2">{{ 
-                pais.translations.nl }}</span>
-            <span class="badge bg-primary mr-2">{{ 
-                pais.translations.hr }}</span>
-            <span class="badge bg-primary mr-2">{{ 
-                pais.translations.fa }}</span>
+            Alemán: <span class="badge bg-primary mr-2">{{ 
+                pais.translations.de }}</span><br>
+            Española: <span class="badge bg-primary mr-2"> {{ 
+                pais.translations.es }}</span><br>
+            Francesa: <span class="badge bg-primary mr-2">{{ 
+                pais.translations.fr }}</span><br>
+            Japonesa: <span class="badge bg-primary mr-2">{{ 
+                pais.translations.ja }}</span><br>
+            Italiana: <span class="badge bg-primary mr-2">{{ 
+                pais.translations.it }}</span><br>
+            Bretón: <span class="badge bg-primary mr-2">{{ 
+                pais.translations.br }}</span><br>
+            Portugués: <span class="badge bg-primary mr-2">{{ 
+                pais.translations.pt }}</span><br>
+            Holandes: <span class="badge bg-primary mr-2">{{ 
+                pais.translations.nl }}</span><br>
+            Croacia: <span class="badge bg-primary mr-2">{{ 
+                pais.translations.hr }}</span><br>
+            Persa: <span class="badge bg-primary mr-2">{{ 
+                pais.translations.fa }}</span><br>
         </div>
     </div>
 
